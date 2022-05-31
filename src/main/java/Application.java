@@ -9,7 +9,7 @@
 
 //git clone 
 
-//sudo java -jar target/front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
+//sudo java -jar clase39/target/front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
 //java -jar front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
 //java -jar front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
 //java -jar front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80

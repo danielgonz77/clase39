@@ -177,7 +177,8 @@ public class Libro implements Comparable<Libro>{
         }
 
         List<Libro> Libros_list = Arrays.asList(ResultLibros);
-        List<Libro> newList = Libros_list.stream().distinct().collect(Collectors.toList());
+        //List<Libro> newList = Libros_list.stream().distinct().collect(Collectors.toList());
+        List<Libro> newList = removeDuplucate(Libros_list);
         //Collections.sort(Libros_list);
         Collections.sort(newList, Comparator.comparingDouble(Libro::getScore));
         Collections.reverse(newList);
@@ -185,7 +186,7 @@ public class Libro implements Comparable<Libro>{
         Libro[] libros_final = new Libro[newList.size()];
         libros_final = newList.toArray(libros_final);
         
-        return removeDuplicates(libros_final);
+        return libros_final;
         // for(int i=0;i<ResultLibros.length;i++){ 
         //     System.out.println(ResultLibros[i].getNombre());
         //     System.out.println(ResultLibros[i].getScore());
@@ -201,20 +202,21 @@ public class Libro implements Comparable<Libro>{
         return this.getNombre().compareTo(u1.getNombre());
     }
 
-    public static Libro[] removeDuplicates(Libro[] a)
-    {
-        LinkedHashSet<Libro> set
-            = new LinkedHashSet<Libro>();
-  
-        // adding elements to LinkedHashSet
-        for (int i = 0; i < a.length; i++)
-            set.add(a[i]);
-  
-        // Print the elements of LinkedHashSet
-        //System.out.print(set);
-        Libro[] WithoutDuplicates = set.toArray(new Libro[] {});
-        return WithoutDuplicates;
+    public List<Libro> removeDuplucate(List<Libro> a){
+        List<Libro> without = new ArrayList<>();
+
+        without.add(a.get(0));
+        for (int i=1; i<a.size(); i++) {
+            String nombre = a.get(i).getNombre();
+            for (Libro libro : without) {
+                if(!libro.getNombre().contains(nombre)){
+                    without.add(a.get(i));
+                }
+            }
+        }
+        return without;
     }
+
 
 }
 
