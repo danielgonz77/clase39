@@ -196,9 +196,9 @@ public class WebServer {
             
             Aggregator aggregator = new Aggregator();  
 
-            String WORKER_ADDRESS_1 = "http://"+"34.168.248.132"+"/searchipn";
-            String WORKER_ADDRESS_2 = "http://"+"34.134.46.5"+"/searchipn";
-            String WORKER_ADDRESS_3 = "http://"+"34.125.220.24"+"/searchipn";
+            String WORKER_ADDRESS_1 = "http://"+"34.168.153.230"+"/searchipn";
+            String WORKER_ADDRESS_2 = "http://"+"107.178.223.194"+"/searchipn";
+            String WORKER_ADDRESS_3 = "http://"+"34.125.217.185"+"/searchipn";
 
             // String WORKER_ADDRESS_1 = "http://"+"localhost:8082"+"/searchipn";
             // String WORKER_ADDRESS_2 = "http://"+"localhost:8083"+"/searchipn";

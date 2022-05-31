@@ -71,11 +71,11 @@ public class Buscador {
         System.out.println(server);
         String[] nombre_libros = null;
 
-        if(server.contains("34.168.248.132")){
+        if(server.contains("34.168.153.230")){
             nombre_libros = Arrays.copyOfRange(pathnames, 0, (int)aux1); //0-14
-        }else if(server.contains("34.134.46.5")){
+        }else if(server.contains("107.178.223.194")){
             nombre_libros = Arrays.copyOfRange(pathnames, (int)aux1, (int)aux1 + (int)aux2); // 15-29
-        }else if(server.contains("34.125.220.24")){
+        }else if(server.contains("34.125.217.185")){
             nombre_libros = Arrays.copyOfRange(pathnames, (int)aux1 + (int)aux2, pathnames.length); //30-45
         }
 

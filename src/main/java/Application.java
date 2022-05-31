@@ -1,3 +1,4 @@
+// token = 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
 
 //export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 //java -jar target/front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 8081
@@ -5,7 +6,9 @@
 //java -jar target/front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 8083
 //java -jar target/front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 8084
 
-//sudo java -jar front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
+//git clone 
+
+//sudo java -jar target/front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
 //java -jar front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
 //java -jar front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
 //java -jar front.end-1.0-SNAPSHOT-jar-with-dependencies.jar 80
