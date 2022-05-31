@@ -178,13 +178,13 @@ public class Libro implements Comparable<Libro>{
 
         List<Libro> Libros_list = Arrays.asList(ResultLibros);
         //List<Libro> newList = Libros_list.stream().distinct().collect(Collectors.toList());
-        List<Libro> newList = removeDuplucate(Libros_list);
+        //List<Libro> newList = removeDuplucate(Libros_list);
         //Collections.sort(Libros_list);
-        Collections.sort(newList, Comparator.comparingDouble(Libro::getScore));
-        Collections.reverse(newList);
+        Collections.sort(Libros_list, Comparator.comparingDouble(Libro::getScore));
+        Collections.reverse(Libros_list);
 
-        Libro[] libros_final = new Libro[newList.size()];
-        libros_final = newList.toArray(libros_final);
+        Libro[] libros_final = new Libro[Libros_list.size()];
+        libros_final = Libros_list.toArray(libros_final);
         
         return libros_final;
         // for(int i=0;i<ResultLibros.length;i++){ 
