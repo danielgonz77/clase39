@@ -185,7 +185,7 @@ public class Libro implements Comparable<Libro>{
         Libro[] libros_final = new Libro[newList.size()];
         libros_final = newList.toArray(libros_final);
         
-        return libros_final;
+        return removeDuplicates(libros_final);
         // for(int i=0;i<ResultLibros.length;i++){ 
         //     System.out.println(ResultLibros[i].getNombre());
         //     System.out.println(ResultLibros[i].getScore());
@@ -201,7 +201,20 @@ public class Libro implements Comparable<Libro>{
         return this.getNombre().compareTo(u1.getNombre());
     }
 
-
+    public static Libro[] removeDuplicates(Libro[] a)
+    {
+        LinkedHashSet<Libro> set
+            = new LinkedHashSet<Libro>();
+  
+        // adding elements to LinkedHashSet
+        for (int i = 0; i < a.length; i++)
+            set.add(a[i]);
+  
+        // Print the elements of LinkedHashSet
+        //System.out.print(set);
+        Libro[] WithoutDuplicates = set.toArray(new Libro[] {});
+        return WithoutDuplicates;
+    }
 
 }
 
