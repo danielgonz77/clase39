@@ -3,7 +3,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import model.frontend.MultipleFSR;
 
@@ -174,12 +177,13 @@ public class Libro implements Comparable<Libro>{
         }
 
         List<Libro> Libros_list = Arrays.asList(ResultLibros);
+        List<Libro> newList = Libros_list.stream().distinct().collect(Collectors.toList());
         //Collections.sort(Libros_list);
-        Collections.sort(Libros_list, Comparator.comparingDouble(Libro::getScore));
-        Collections.reverse(Libros_list);
+        Collections.sort(newList, Comparator.comparingDouble(Libro::getScore));
+        Collections.reverse(newList);
 
-        Libro[] libros_final = new Libro[Libros_list.size()];
-        libros_final = Libros_list.toArray(libros_final);
+        Libro[] libros_final = new Libro[newList.size()];
+        libros_final = newList.toArray(libros_final);
         
         return libros_final;
         // for(int i=0;i<ResultLibros.length;i++){ 
@@ -196,6 +200,8 @@ public class Libro implements Comparable<Libro>{
     {
         return this.getNombre().compareTo(u1.getNombre());
     }
+
+
 
 }
 
